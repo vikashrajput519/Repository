@@ -3,6 +3,6 @@
   <span class="example-spicer"></span>
   <span [hidden]="!isLoggedIn"><a mat-button>View Book List</a></span>
   <span [hidden]="!isLoggedIn"><a mat-button>Add Book</a></span>
-  <span [hidden]="!isLoggedIn"><a mat-button>Logout</a></span>
+  <span [hidden]="!isLoggedIn" (click)="toggleDisplay()"><a mat-button>Logout</a></span>
 </mat-toolbar>
 <p><button mat-raised-button class="mat-primary" (click)="toggleDisplay()">Toggle</button></p>
