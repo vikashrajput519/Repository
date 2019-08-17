@@ -19,8 +19,8 @@ public class RequestFilter {
 		HttpServletResponse response = (HttpServletResponse) res;
 		
 		response.setHeader("Access-Control-Allow-Origin", "*");
-		response.setHeader("Access-control-Allow-Methods", "POST, PUT, GET, OPTIONS, DELETE");
-		response.setHeader("Access-Control-Allow-Headers", "x-requested-with, x-auth-token");
+		response.setHeader("Access-control-Allow-Methods", "GET, POST, PUT, PATCH, POST, DELETE, OPTIONS");
+		response.setHeader("Access-Control-Allow-Headers", " Origin,Content-Type,x-requested-with,x-auth-token");
 		response.setHeader("Access-Control-Max-Age", "3600");
 		response.setHeader("Access-Control-Allow-Credentials", "true");
 		
@@ -32,7 +32,7 @@ public class RequestFilter {
 			}
 		} else {
 			System.out.println("Pre-fight");
-			response.setHeader("Access-Control-Allowed-Methods", "POST, GET, DELETE");
+			response.setHeader("Access-Control-Allowed-Methods", "POST, OPTIONS, GET, DELETE");
 			response.setHeader("Access-Control-Max-Age", "3600");
 			response.setHeader("Access-Control-Allow-Headers", "authorization, content-type, x-auth-token, " +
                     "access-control-request-headers,access-control-request-method,accept,origin,authorization,x-requested-with");
